@@ -1,7 +1,8 @@
 body{
-    background-image: url("https://i.pinimg.com/236x/09/97/5a/09975a7e1adceeb34146878015986511.jpg");
+    background-image: url("https://i.pinimg.com/236x/31/84/3b/31843b65da8b4e1bf4e9ff95df2dbecf.jpg");
     background-size: 175vh 100vh ;
     font-family: Arial;
+    backdrop-filter: blur(2px);
     height:100vh
   }
   
