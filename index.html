@@ -14,32 +14,40 @@
     <nav class="menu">
       <ul>
         <li><a href="https://www.instagram.com/_bruno.m__/">Instagram</a></li>
-        <li><a href="https://www.instagram.com/_bruno.m__/">Twitter</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="https://twitter.com/home?lang=pt">Twitter</a></li>
+        <li><a href="mailto:bmachado566@gmail.com">Contato</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
       </ul>
     </nav>
 
     <div>
-      <img class="icone" src="img/CC_20200512_200018.png" alt="Imagem não carregada " width="200px" height="200px" id="icon">
-      <h2 class="site-subtitle">web developer</h2>
+
       <h1 class="site-title">Bruno Machado</h1>
+      <h2 class="site-subtitle">web developer</h2>
+      <img class="icone" src="img/CC_20200512_200018.png" alt="Imagem não carregada " width="200px" height="200px">
+      <p class="i">
+        Olá, sou estudante da área de TI, curso o 3º périodo no Isntituto Federal de Pernambco, estou fazendo o irmersao
+        pois nesse ano tenho uma máteria sobre html e css e o irmersao serve como uma forma de praticar o que já aprendi
+        e adquirir novos conhecimentos. Se quiser saber mais sobre me entre em contato!
+      </p>
+
     </div>
   </header>
+
   <style>
     .icone {
-      transition: all 1s;
+      transition: all 2s;
       cursor: pointer;
     }
 
-    .icon:hover{
+    .icon:hover {
       -webkit-transform: rotateZ(360deg);
       transform: rotateZ(360deg);
     }
-    
   </style>
 
   <section>
-    <h2 style="color: white;">Portfólio</h2>
+    <h2 id="portfolio" style="color: white;">Portfólio</h2>
 
     <figure>
       <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg">
@@ -61,8 +69,42 @@
       <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg">
       <figcaption style="color: white;">Projetos pessoais</figcaption>
     </figure>
-    
+
   </section>
+
+  <style>
+    h1::after {
+      animation: pisca .7 infinite;
+      content: "";
+      margin-left: 5px;
+      opacity: 1;
+    }
+
+    @keyframes pisca {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
+  <script>
+
+    function typeWriter(elemento) {
+      const textoArray = elemento.innerHTML.split('');
+      elemento.innerHTML = '';
+      textoArray.forEach((letra, i) => {
+        setTimeout(() => elemento.innerHTML += letra, 45 * i);
+      });
+    }
+    const apresentacao = document.querySelector("p");
+    typeWriter(apresentacao);
+  </script>
+
 </body>
 
 </html>
