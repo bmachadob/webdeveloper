@@ -29,14 +29,16 @@ body{
     align-items: center;
     display: flex;
     height: 100vh;
+    justify-content: center;
     text-align: center; 
   }
   
   .menu{
     background-color: white;
     position: fixed;
-    width: 100vw;
     top: 0;
+    width: 100vw;
+    
   }
   .menu li{
     list-style: none;
@@ -76,22 +78,27 @@ body{
 
   .img-portfolio{
     border-radius: 120px;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
   }
  .icone{
    border-radius: 120px;
  }
 
-h2, img{
+h1, h2, img{
   margin: 10px;
 }
  
 p {
-  background-color: #31445c;
-  border: 4px dashed #31445c;
-  box-shadow: 5px 5px 10px 5px rgb(116, 142, 175);
   color: whitesmoke;
   font-style: italic;
-  margin: 20px;
+  margin: 50px;
+
+}
+
+.port{
+  background-color: #bbcce2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
