@@ -35,6 +35,7 @@ body{
   
   .menu{
     background-color: white;
+    background-repeat: r white;
     position: fixed;
     top: 0;
     width: 100vw;
@@ -78,8 +79,8 @@ body{
 
   .img-portfolio{
     border-radius: 120px;
-    height: 90px;
-    width: 90px;
+    height: 50px;
+    width: 50px;
   }
  .icone{
    border-radius: 120px;
@@ -98,7 +99,18 @@ p {
 
 .port{
   background-color: #bbcce2;
+  background-size: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.comun{
+  width: 100vw;
+  font-size: 5px;
+}
+.comun li{
+  background-color: whitesmoke;
+  list-style: none;
+  text-decoration: none;
 }
