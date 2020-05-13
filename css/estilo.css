@@ -26,10 +26,10 @@ body{
   }
 
   header{
-    height: 50vh;
-    display: flex;
-    justify-content:center;
     align-items: center;
+    display: flex;
+    height: 100vh;
+    text-align: center; 
   }
   
   .menu{
@@ -75,10 +75,23 @@ body{
   }
 
   .img-portfolio{
+    border-radius: 120px;
     height: 100px;
     width: 100px;
   }
+ .icone{
+   border-radius: 120px;
+ }
+
+h2, img{
+  margin: 10px;
+}
  
-  h1{
-    height: 2px;
-  }
+p {
+  background-color: #31445c;
+  border: 4px dashed #31445c;
+  box-shadow: 5px 5px 10px 5px rgb(116, 142, 175);
+  color: whitesmoke;
+  font-style: italic;
+  margin: 20px;
+}
