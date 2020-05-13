@@ -1,68 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: bor;
+}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bruno Machado</title>
-  <link rel="stylesheet" href="./css/estilo.css">
-</head>
-
-<body>
-  <header>
-
-    <nav class="menu">
-      <ul>
-        <li><a href="https://www.instagram.com/_bruno.m__/">Instagram</a></li>
-        <li><a href="https://www.instagram.com/_bruno.m__/">Twitter</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </nav>
-
-    <div>
-      <img class="icone" src="img/CC_20200512_200018.png" alt="Imagem não carregada " width="200px" height="200px" id="icon">
-      <h2 class="site-subtitle">web developer</h2>
-      <h1 class="site-title">Bruno Machado</h1>
-    </div>
-  </header>
-  <style>
-    .icone {
-      transition: all 1s;
-      cursor: pointer;
+body{
+    background-image: url("../img/fundo.jpg");
+    background-size: 220vh 220vh ;
+    font-family: Arial;
+    height:100vh;
+    font-size: 12px;
     }
+/*se a tela estiver +- 400px vai carregar estes estilos*/
+  @media (min-width: 400px) {
+    body{
+      font-size: 14px;
+    }  
+  }
 
-    .icon:hover{
-      -webkit-transform: rotateZ(360deg);
-      transform: rotateZ(360deg);
+  /* breake point*/
+  @media (min-width: 600px){
+    body{
+      font-size: 18px;
     }
-    
-  </style>
+  }
 
-  <section>
-    <h2 style="color: white;">Portfólio</h2>
+  header{
+    height: 50vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  .menu{
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+  }
+  .menu li{
+    list-style: none;
+  }
+  
+  .menu ul{
+    display: flex;
+    justify-content: space-around;
+  }
 
-    <figure>
-      <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg">
-      <figcaption style="color: white;">eCommerce</figcaption>
+  .menu a {
+    display: block;
+    padding: 20px 40px;
+  }
+  
+  a{
+    color: #31445c;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .site-subtitle,
+  .site-title{
+    color: whitesmoke;
+    text-align: center;
+  }
+  .site-title{
+    font-size: 4em;
+  }
+  
+  .site-subtitle{
+    font-style: italic;
+  }
 
-    </figure>
-
-    <figure>
-      <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
-      <figcaption style="color: white;">Mobile</figcaption>
-    </figure>
-
-    <figure>
-      <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
-      <figcaption style="color: white;">Web design</figcaption>
-    </figure>
-
-    <figure>
-      <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg">
-      <figcaption style="color: white;">Projetos pessoais</figcaption>
-    </figure>
-    
-  </section>
-</body>
-
-</html>
+  .img-portfolio{
+    height: 100px;
+    width: 100px;
+  }
+ 
+  h1{
+    height: 2px;
+  }
