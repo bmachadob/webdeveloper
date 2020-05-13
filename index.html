@@ -26,9 +26,7 @@
       <h2 class="site-subtitle">web developer</h2>
       <img class="icone" src="img/CC_20200512_200018.png" alt="Imagem não carregada " width="200px" height="200px">
       <p class="i">
-        Olá, sou estudante da área de TI, curso o 3º périodo no Isntituto Federal de Pernambco, estou fazendo o irmersao
-        pois nesse ano tenho uma máteria sobre html e css e o irmersao serve como uma forma de praticar o que já aprendi
-        e adquirir novos conhecimentos. Se quiser saber mais sobre me entre em contato!
+        Olá, sou estudante da área de TI, curso o 3º périodo no Isntituto Federal de Pernambco. Se quiser saber mais entre em contato!
       </p>
 
     </div>
@@ -46,36 +44,36 @@
     }
   </style>
 
-  <section>
-    <h2 id="portfolio" style="color: white;">Portfólio</h2>
+  <section class="port">
+    <h2 id="portfolio" style="font-family: cursive;color: #31445c;">Portfólio</h2>
 
     <figure>
       <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg">
-      <figcaption style="color: white;">eCommerce</figcaption>
+      <figcaption style="font-family: cursive; color: #31445c;">eCommerce</figcaption>
 
     </figure>
 
     <figure>
       <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
-      <figcaption style="color: white;">Mobile</figcaption>
+      <figcaption style="font-family: cursive; color: #31445c;">Mobile</figcaption>
     </figure>
 
     <figure>
       <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
-      <figcaption style="color: white;">Web design</figcaption>
+      <figcaption style="font-family: cursive; color: #31445c;">Web design</figcaption>
     </figure>
 
     <figure>
       <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg">
-      <figcaption style="color: white;">Projetos pessoais</figcaption>
+      <figcaption style="font-family: cursive;color: #31445c;">Projetos pessoais</figcaption>
     </figure>
 
   </section>
-
+<body>
   <style>
-    h1::after {
+    p::after {
       animation: pisca .7 infinite;
-      content: "";
+      content: "|";
       margin-left: 5px;
       opacity: 1;
     }
@@ -92,13 +90,15 @@
       }
     }
   </style>
+</body>
+  
   <script>
 
     function typeWriter(elemento) {
       const textoArray = elemento.innerHTML.split('');
       elemento.innerHTML = '';
       textoArray.forEach((letra, i) => {
-        setTimeout(() => elemento.innerHTML += letra, 45 * i);
+        setTimeout(() => elemento.innerHTML += letra, 30 * i);
       });
     }
     const apresentacao = document.querySelector("p");
