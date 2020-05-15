@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bruno Machado</title>
   <link rel="stylesheet" href="./css/estilo.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel&family=Gamja+Flower&family=Poiret+One&family=Roboto&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4f6fdda9c7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,12 +19,12 @@
       <ul>
         <li><a href="https://www.instagram.com/_bruno.m__/">Instagram</a></li>
         <li><a href="https://twitter.com/home?lang=pt">Twitter</a></li>
-        <li><a href="#c">Contato</a></li>
+        <li><a href="#contato">Contato</a></li>
         <li><a href="#portfolio">Portfólio</a></li>
       </ul>
     </nav>
 
-    <div>
+    <div class="titulo">
 
       <h1 class="site-title">Bruno Machado</h1>
       <h2 class="site-subtitle">web developer</h2>
@@ -33,42 +37,33 @@
     </div>
   </header>
 
-  <style>
-    .icone {
-      transition: all 2s;
-      cursor: pointer;
-    }
+  <section id="portfolio" class="port">
+    <h2>Portfólio</h2>
 
-    .icon:hover {
-      -webkit-transform: rotateZ(360deg);
-      transform: rotateZ(360deg);
-    }
-  </style>
+    <div class="grid">
 
-  <section class="port">
-    <h2 id="portfolio" style="font-family: cursive;color: #31445c;">Portfólio</h2>
+      <figure>
+        <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg">
+        <figcaption style="font-family: cursive; color: #31445c;">eCommerce</figcaption>
 
-    <figure>
-      <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg">
-      <figcaption style="font-family: cursive; color: #31445c;">eCommerce</figcaption>
+      </figure>
 
-    </figure>
+      <figure>
+        <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
+        <figcaption style="font-family: cursive; color: #31445c;">Mobile</figcaption>
+      </figure>
 
-    <figure>
-      <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
-      <figcaption style="font-family: cursive; color: #31445c;">Mobile</figcaption>
-    </figure>
+      <figure>
+        <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
+        <figcaption style="font-family: cursive; color: #31445c;">Web design</figcaption>
+      </figure>
 
-    <figure>
-      <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
-      <figcaption style="font-family: cursive; color: #31445c;">Web design</figcaption>
-    </figure>
+      <figure>
+        <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg">
+        <figcaption style="font-family: cursive;color: #31445c;">Projetos pessoais</figcaption>
+      </figure>
 
-    <figure>
-      <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg">
-      <figcaption style="font-family: cursive;color: #31445c;">Projetos pessoais</figcaption>
-    </figure>
-
+    </div>
   </section>
 
   <body>
@@ -107,12 +102,29 @@
     typeWriter(apresentacao);
   </script>
 
-  <nav id="c"class="comun">
-    <ul>
-      <a href="mailto:bmachado566@gmail.com"> <img class="img-portfolio"  src="./img/1589391239939.png">
-      <a href="https://api.whatsapp.com/send?phone=5587981334236&text=Olá%20tudo%20bem?"> <img class="img-portfolio"  src="./img/38334.png">
-    </ul>
-  </nav>
+  <section class="contato" id="contato">
+    <h2>Contato</h2>
+
+    <div class="grid icons">
+
+      <a target="_blank" href="https://github.com/bmachadob">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a target="_blank" href="https://twitter.com/home?lang=pt">
+        <i class="fab fa-twitter"></i>
+      </a>
+
+      <a target="_blank" href="mailto:bmachado566@gmail.com">
+        <i class="fas fa-envelope"></i>
+      </a>
+
+      <a target="_blank" href="https://www.instagram.com/_bruno.m__/">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+    </div>
+  </section>
 
 </body>
 
