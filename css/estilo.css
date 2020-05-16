@@ -6,31 +6,40 @@
 
 body{
     background-image: url("../img/fundo.jpg");
-    background-size: 220vh 220vh ;
+    background-size: auto 100vh ;
     font-family: 'Roboto', sans-serif;
     height:100vh;
+    font-size: 12px;
     }
 /*se a tela estiver +- 400px vai carregar estes estilos*/
   @media (min-width: 400px) {
     body{
-      font-size: 18px;
+      font-size: 14px;
     }  
   }
 
   /* breake point*/
   @media (min-width: 600px){
     body{
-      font-size: 22px;
+      background-attachment: fixed;
+      background-size: cover;
+      font-size: 18px;
     }
   }
 
+  /* breakpoint */
+  @media (min-width: 1200px) {
+    body {
+   
+      font-size: 20px;
+  }
+}
+
   header{
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
     height: 100vh;
+    display: flex;
     justify-content: center;
-    text-align: center; 
+    align-items: center;
   }
   
   .menu{
@@ -53,7 +62,6 @@ body{
   .menu a {
     display: block;
     padding: 20px 40px;
-    text-decoration: none;
     transition: background-color 1s, color 1s;
   }
   .menu a:active,
@@ -74,17 +82,22 @@ body{
   .titulo{
     transform: scale(0.2) translateY(50vh);
     opacity: 0;
-    animation: linear 2s animacaoTitulo forwards;
+    animation: 1s ease 1s animacaoTitulo forwards;
   }
 
   @keyframes animacaoTitulo{
-    100%{
+    from {
+      transform: scale(0.2) translateY(50vh);
+      opacity: 0;
+    }
+    to {
       transform: scale(1) translateY(0);
       opacity: 1;
     }
   }
 
-  .site-subtitle, .site-title{
+  .site-subtitle, 
+  .site-title{
     color: whitesmoke;
     text-align: center;
   }
@@ -96,85 +109,132 @@ body{
   .site-subtitle{
     font-style: italic;
     font-family: 'Poiret One', cursive;
+    line-height:  1.8em;
   }
 
-  .port h2{
-    color: black;
-    font-family:cursive;
-    font-size: 2em;
-    margin-bottom: 1em;
-  }
-
-  .contato, .port {
+  .sobre,
+  .contato, 
+  .port {
     padding: 3em;
     min-height: 100vh;
   }
 
-  .contato h2, .port h2{
-    font-family: 'Cinzel', serif;
+  @media (min-width: 1200px){
+    .container {
+      max-width: 1200px;
+      margin-left:auto ;
+      margin-right: auto;
+    }
   }
 
-  .port .grid{
-    
+  .sobre h2, 
+  .contato h2, 
+  .portfolio h2{
+    font-family: 'Cinzel', serif;
+    color: whitesmoke;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+  }
+
+  .sobre p{
+    color: whitesmoke;
+    text-indent: 1.4em;
+    margin-bottom: 1em;
+    text-align: justify;
+  }
+
+  .sobre a{
+    color:aqua;
+    text-decoration: underline;
+  }
+
+  .sobre a:hover {
+    background-color: cyan;
+    text-decoration: none;
+    color: magenta;
+  }
+
+  .sobre .avatar{
+    margin-left: 2em;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  @media( min-width: 600px){
+    .sobre .avatar {
+      float: right;
+      clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    }
+  }
+
+
+  .portfolio .grid{ 
     display: grid;
     gap: 2em;
   }
 
-  @media( min-width:560px){
-    .port .grid{
+  @media( min-width: 560px){
+    .portfolio .grid{
       grid-template-columns: 240px 240px;
     }
   }
 
   @media( min-width:880px){
-    .port .grid{
-      align-content: center;
+    .portfolio .grid{
       grid-template-columns: repeat(3, 260px);
+      align-content: center;
       justify-content: center;
-      height: calc(100vh - 4em - 20px - 1.5em);
+      height: calc(100vh - 8em - 48px);
     }
   }
 
-  .port figure{
+  .flip-card {
+    height: 180px;
+    perspective: 1000px;
+  }
+
+  .flip-card:hover .card {
+    transform: rotateY(180deg);
+  }
+
+  .card{
+  position: relative;
+  transform-style:preserve-3d;
+  transition: transform 3s;
+  }
+
+  .card-front, 
+  .card-back {
+    backface-visibility: hidden;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .7);
+    height: 180px;
+    width: 100%;
+    transform: rotateY(180deg);
+  }
+
+  .portfolio figure {
     text-align: center;
   }
 
-  .img-portfolio{
-    height: 100px;
-    width: 150px;
+  .img-portfolio {
+    height: 180px;
+    width: 100%;
     object-fit: cover;
     object-position: left bottom;
-    transition: transform 500ms; 
+    transition: transform 500ms;
   }
 
-  .img-portfolio:hover{
-    transform: scale(1.2);
-  }
-
- .icone{
-   border-radius: 120px;
-   transition: transform 500ms;
- }
-
- .icone:hover{
-   transform: rotateZ(360deg);
- }
-
-  h1, h2, img{
-    margin: 10px;
-  }
- 
-  p {
-    color: whitesmoke;
-    font-style: italic;
-    font-family: 'Poiret One', cursive;
-    margin: 50px;
-  }
-
-  .comun{
-    height: 25px;
-    width: 25px;
-  }
+  /*.img-portfolio:hover{
+    transform: scale(1.2) rotate(-2deg);
+  } */
 
   .contato .icons{
     text-align: center;
@@ -182,8 +242,8 @@ body{
 
   .contato a{
     color: whitesmoke;
-    font-size: 5em;
-    transition: text-shadow 10ms;
+    font-size: 4em;
+    transition: text-shadow 1s;
   }
 
   .contato a:active,
